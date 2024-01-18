@@ -37,7 +37,7 @@ class Header extends HTMLElement {
     a.appendChild(img);
 
     const h2 = document.createElement("h2");
-    h2.innerHTML = "Gojek Screenshot";
+    h2.innerHTML = "Gojek";
     h2.style.cssText = `
         display: inline-block;
         vertical-align: middle;
