@@ -24,16 +24,13 @@
     <link rel="stylesheet" href="assets/style.css" />
     <script defer src="assets/js/material.min.js"></script>
     <script src="app.js" type="module"></script>
+    <script src="components/header/index.js" type="module"></script>
   </head>
   <body>
     <div id="app">
+      <header-component></header-component>
       <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-        <header class="mdl-layout__header">
-          <div class="mdl-layout__header-row">
-            <!-- Title -->
-            <span class="mdl-layout-title">PWA - Vanilla JS</span>
-          </div>
-        </header>
+
         <div class="mdl-layout__drawer">
           <span class="mdl-layout-title">PWA - Vanilla JS</span>
           <nav class="mdl-navigation">
@@ -47,6 +44,9 @@
           <p id="output">
             <img src="assets/images/pwa-logo.png" alt="" />
           </p>
+          <button>
+            <a class="mdl-navigation__link" href="pages/gojek/">Gojek Site</a>
+          </button>
         </main>
       </div>
     </div>
