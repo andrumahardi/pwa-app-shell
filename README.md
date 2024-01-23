@@ -1,43 +1,29 @@
-# pwa-app-shell
+# PWA App Shell
 
-PWA with Vanilla JS
+This repository houses a Progressive Web App (PWA) developed using Vanilla JavaScript. The application is designed to showcase a native user experience across multi domain by utilizing App Shell pattern.
 
-## How to run
+## Folder Structure
 
-```sh
-npm i
-npm run start
+```lua
+pwa-app-shell
+|
+|-- legacies
+|    |-- 1st-prototype
+|    |-- andru-prototype
+|    |-- nu-prototype
+|    |-- lutfi-prototype
+|
+|-- root
+|    |-- [Main App Files]
 ```
 
-### Expected output
+- **legacies**
+  - This directory comprises legacy projects, each representing a distinct prototype:
+    - **1st-prototype:** Initial prototype project.
+    - **andru-prototype:** Prototype project contributed by Andru.
+    - **nu-prototype:** Prototype project contributed by Nu.
+    - **lutfi-prototype:** Prototype project contributed by Lutfi.
+- **root**
+  - The main app resides in this directory, containing the core files and components of the PWA.
 
-```sh
-> start
-> http-server -c-1 -p 3000
-
-Starting up http-server, serving ./
-
-http-server version: 14.1.1
-
-http-server settings:
-CORS: disabled
-Cache: -1 seconds
-Connection Timeout: 120 seconds
-Directory Listings: visible
-AutoIndex: visible
-Serve GZIP Files: false
-Serve Brotli Files: false
-Default File Extension: none
-
-Available on:
-  http://127.0.0.1:3000
-  http://xxx.xxx.xxx.xxx:3000
-Hit CTRL-C to stop the server
-```
-
-Tested using Node v21.5.0 and NPM v10.2.4
-
-## References
-
-- [Service Worker Lifecycle](https://web.dev/service-worker-lifecycle/)
-- https://github.com/posinatel/DM122-PWA-AppShell
+Feel free to explore each directory for a closer look at the individual prototypes and the primary app structure in the root folder.
