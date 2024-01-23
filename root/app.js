@@ -24,15 +24,15 @@ function fetchDocument() {
   return false;
 }
 
-function attachIframe() {
-  const iframe = document.createElement("iframe");
-  iframe.setAttribute("src", externalUrl);
-  iframe.style.width = "100vw";
-  iframe.style.height = "100vh";
+// function attachIframe() {
+//   const iframe = document.createElement("iframe");
+//   iframe.setAttribute("src", externalUrl);
+//   iframe.style.width = "100vw";
+//   iframe.style.height = "100vh";
 
-  const root = document.getElementById("root");
-  root.innerHTML = "";
-  root.append(iframe);
+//   const root = document.getElementById("root");
+//   root.innerHTML = "";
+//   root.append(iframe);
 
-  return false;
-}
+//   return false;
+// }
