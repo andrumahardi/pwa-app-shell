@@ -9,6 +9,8 @@ const assetsToCache = [
   'assets/images/pwa-logo.png',
   'assets/js/material.min.js',
   'assets/style.css',
+  'pages/gojek/goride.html',
+  'pages/gojek/gofood.html',
   'app.js',
   'favicon.ico',
   'index.html',

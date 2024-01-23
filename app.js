@@ -4,7 +4,7 @@ if ("serviceWorker" in navigator) {
     console.log("[Service Worker] Registration failed");
 
   navigator.serviceWorker
-    .register("sw.js")
+    .register("/sw.js")
     .then(showSuccessMessage)
     .catch(showErrorMessage);
 }

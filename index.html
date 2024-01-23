@@ -1,54 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-    />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>PWA - Vanilla JS</title>
-    <link rel="manifest" href="manifest.json" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto:400,700"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.3.0/material.indigo-pink.min.css"
-    />
-    <link rel="stylesheet" href="assets/style.css" />
-    <script defer src="assets/js/material.min.js"></script>
-    <script src="app.js" type="module"></script>
-    <script src="components/header/index.js" type="module"></script>
-  </head>
-  <body>
-    <div id="app">
-      <header-component></header-component>
-      <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
 
-        <div class="mdl-layout__drawer">
-          <span class="mdl-layout-title">PWA - Vanilla JS</span>
-          <nav class="mdl-navigation">
-            <a class="mdl-navigation__link" href="pages/gojek/">Gojek</a>
-          </nav>
-        </div>
-        <main
-          class="mdl-layout__content mat-typography"
-          style="text-align: center"
-        >
-          <p id="output">
-            <img src="assets/images/pwa-logo.png" alt="" />
-          </p>
-          <button>
-            <a class="mdl-navigation__link" href="pages/gojek/">Gojek Site</a>
-          </button>
-        </main>
-      </div>
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+  />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>PWA - Vanilla JS</title>
+  <link rel="manifest" href="manifest.json" />
+  <link
+    href="https://fonts.googleapis.com/css?family=Roboto:400,700"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.3.0/material.indigo-pink.min.css"
+  />
+  <link rel="stylesheet" href="assets/style.css" />
+  <script defer src="assets/js/material.min.js"></script>
+  <script src="app.js" type="module"></script>
+  <script src="components/header/index.js" type="module"></script>
+  <style>
+    main {
+      position: relative;
+      padding-bottom: 55px;
+    }
+
+    main>img {
+      padding-top: 72px;
+      background: #dfdfdf;
+    }
+
+    .link-group {
+      position: fixed;
+      z-index: 2;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      bottom: 0;
+      width: calc(100vw - 4rem);
+      height: 62px;
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .link-btn {
+      display: block;
+      border: 2px solid #05acdc;
+      border-radius: 10px;
+      padding: 2rem;
+    }
+
+    #popup-copywriting {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      background: #5f818bba;
+      height: 100vh;
+      width: calc(100vw - 2rem);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+      transition: transform .5s;
+    }
+
+    #popup-copywriting>div:first-child {
+      background: white;
+      text-align: center;
+      padding: 1rem;
+      border-radius: 10px;
+    }
+
+    #popup-copywriting button {
+      width: 100%;
+      padding: 0.5rem;
+      background: #6fcce9;
+      border: none;
+      color: white;
+      border-radius: 5px;
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <header-component></header-component>
+    <!-- navigations -->
+    <img class="upper-navigation" src="/assets/images/gojek-upper-navigation.jpg" />
+    <img class="bottom-navigation" src="/assets/images/gojek-bottom-navigation.jpg" />
+
+    <div class="link-group">
+      <a class="link-btn" style="visibility: hidden;"></a>
+      <a class="link-btn" href="/pages/gojek/goride.html"></a>
+      <a class="link-btn" href="https://de38-180-254-71-169.ngrok-free.app/pages/gojek/goride.html"></a>
+      <a class="link-btn" style="visibility: hidden;"></a>
     </div>
-  </body>
+
+
+    <!-- main contents -->
+    <main>
+      <img src="/assets/images/gojek-main-page.jpg" />
+    </main>
+  </div>
+
+  <section id="popup-copywriting">
+    <div>
+      <p>this page illustrates how to implement a PWA app that open sites hosted on subdomains or different domain names
+        without showing the browser UI</p>
+      <button onclick="closePopup()">Got it!</button>
+    </div>
+  </section>
+</body>
+
+<script>
+  function closePopup() {
+    let timeout = null
+
+    document.getElementById("popup-copywriting").style.transform = "translateY(-100vh)"
+    document.getElementById("popup-copywriting").style.background = "unset"
+    timeout = setTimeout(() => {
+      document.getElementById("popup-copywriting").style.display = "none"
+      clearTimeout(timeout)
+    }, 300)
+  }
+</script>
+
 </html>

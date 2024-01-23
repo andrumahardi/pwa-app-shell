@@ -1,4 +1,33 @@
-#output img {
-  margin-top: 2%;
-  width: 50%;
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+}
+
+p {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.upper-navigation {
+  position: fixed;
+  padding-bottom: 0.5rem;
+  background: white;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  box-shadow: 0 0 8px 4px #dfdfdf70;
+  z-index: 1;
+}
+
+.bottom-navigation {
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+}
+
+img {
+  width: 100%;
 }

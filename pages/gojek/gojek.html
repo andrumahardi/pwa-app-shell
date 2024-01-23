@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gojek Main App</title>
+  <link rel="stylesheet" href="/assets/style.css" />
+  <style>
+    main {
+      position: relative;
+      padding-bottom: 55px;
+    }
+
+    main>img {
+      padding-top: 72px;
+      background: #dfdfdf;
+    }
+
+    .link-btn {
+      position: absolute;
+      display: block;
+      width: 65px;
+      height: 65px;
+    }
+
+    #popup-copywriting {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      background: #5f818bba;
+      height: 100vh;
+      width: calc(100vw - 2rem);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+      transition: transform .5s;
+    }
+
+    #popup-copywriting>div:first-child {
+      background: white;
+      text-align: center;
+      padding: 1rem;
+      border-radius: 10px;
+    }
+
+    #popup-copywriting button {
+      width: 100%;
+      padding: 0.5rem;
+      background: #6fcce9;
+      border: none;
+      color: white;
+      border-radius: 5px;
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- navigations -->
+  <img class="upper-navigation" src="/assets/images/gojek-upper-navigation.jpg" />
+  <img class="bottom-navigation" src="/assets/images/gojek-bottom-navigation.jpg" />
+
+  <!-- main contents -->
+  <main>
+    <a class="link-btn" href="/pages/gojek/goride.html" style="top: 300px; left: 25px;"></a>
+    <a class="link-btn" href="/pages/gojek/goride.html" style="top: 300px; left: 110px;"></a>
+    <a class="link-btn" href="/pages/gojek/gofood.html" style="top: 300px; left: 200px;"></a>
+    <img src="/assets/images/gojek-main-page.jpg" />
+  </main>
+
+  <section id="popup-copywriting">
+    <div>
+      <p>this page illustrates how to implement a PWA app that open sites hosted on subdomains or different domain names
+        without showing the browser UI</p>
+      <button onclick="closePopup()">Got it!</button>
+    </div>
+  </section>
+</body>
+
+<script>
+  function closePopup() {
+    let timeout = null
+
+    document.getElementById("popup-copywriting").style.transform = "translateY(-100vh)"
+    document.getElementById("popup-copywriting").style.background = "unset"
+    timeout = setTimeout(() => {
+      document.getElementById("popup-copywriting").style.display = "none"
+      clearTimeout(timeout)
+    }, 300)
+  }
+</script>
+
+</html>

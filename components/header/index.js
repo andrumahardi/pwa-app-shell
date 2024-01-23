@@ -28,11 +28,11 @@ class Header extends HTMLElement {
         margin-right: 10px;
     `;
     if (window.location.pathname === "/" || window.location.pathname === "") {
-      a.href = "/";
+      a.href = "https://electric-bluegill-immensely.ngrok-free.app/";
       img.src = "../../assets/icons/icon-home-64.png";
     } else {
       img.src = "../../assets/icons/icon-back-64.png";
-      a.href = "/";
+      a.href = "https://electric-bluegill-immensely.ngrok-free.app/";
     }
     a.appendChild(img);
 
