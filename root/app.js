@@ -1,4 +1,3 @@
-// const externalUrl = "https://dev.to";
 const externalUrl = "https://jsonplaceholder.typicode.com/";
 
 (function () {
@@ -19,8 +18,8 @@ function fetchDocument() {
       const root = document.getElementById("root");
       const html = res.data.replace(
         '<link rel="stylesheet" href="/style.css" />',
-        '<link rel="stylesheet" href="https://jsonplaceholder.typicode.com/style.css" />'
-      )
+        '<link rel="stylesheet" href="' + externalUrl + 'style.css" />'
+      );
       root.innerHTML = html;
     })
     .catch(console.log);
