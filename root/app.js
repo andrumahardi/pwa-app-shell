@@ -1,4 +1,5 @@
-const externalUrl = "https://dev.to";
+// const externalUrl = "https://dev.to";
+const externalUrl = "https://jsonplaceholder.typicode.com/";
 
 (function () {
   if ("serviceWorker" in navigator) {
@@ -16,7 +17,11 @@ function fetchDocument() {
     .get(externalUrl)
     .then((res) => {
       const root = document.getElementById("root");
-      root.innerHTML = res.data;
+      const html = res.data.replace(
+        '<link rel="stylesheet" href="/style.css" />',
+        '<link rel="stylesheet" href="https://jsonplaceholder.typicode.com/style.css" />'
+      )
+      root.innerHTML = html;
     })
     .catch(console.log);
 
