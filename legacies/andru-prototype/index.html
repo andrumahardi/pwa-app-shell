@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="manifest" href="manifest.json" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/global-styles.css" />
+    <title>PWA x Shell Pattern</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+
+  <body>
+    <div id="root">
+      <div
+        style="
+          width: 250px;
+          margin: 0 auto;
+          text-align: center;
+          margin-top: 150px;
+        "
+      >
+        <p>
+          This app illustrates how to implement a PWA app that open sites hosted
+          on subdomains or different domain names without showing the browser UI
+          using <strong>"Shell Pattern"</strong>
+        </p>
+        <p style="margin-top: 1rem">This website has 3 sections:</p>
+        <ul style="margin-top: 1rem">
+          <li style="text-align: left">
+            The <strong>"Home"</strong> section resides at the following domain:
+            <a href="/">https://electric-bluegill-immensely.ngrok-free.app/</a>
+          </li>
+          <li style="text-align: left">
+            The <strong>"Original"</strong> link directs users to
+            <a href="https://dev.to/aurelkurtula"
+              >https://dev.to/aurelkurtula</a
+            >
+          </li>
+          <li style="text-align: left">
+            The <strong>"Shell Pattern"</strong> enables the native experience
+            of a different domain site 
+            <a href="/" onclick="return fetchDocument(this)"
+              >(https://dev.to/aurelkurtula)</a
+            > within the
+            Content Shell, seamlessly embedded within the overarching App Shell
+            <a href="/">(https://electric-bluegill-immensely.ngrok-free.app/)</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="navbar">
+      <a href="/"><img src="images/icon-home.png" />Home</a>
+      <a href="https://dev.to/aurelkurtula"
+        ><img src="images/icon-original.png" />Original</a
+      >
+      <a href="/" onclick="return fetchDocument(this)"
+        ><img src="images/icon-shell.png" />Shell Pattern</a
+      >
+    </div>
+
+    <script src="app.js" crossorigin="anonymous"></script>
+  </body>
+</html>

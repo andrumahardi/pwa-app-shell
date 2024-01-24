@@ -1,0 +1,27 @@
+{
+  "name": "pwa-shell-pattern",
+  "version": "1.0.0",
+  "description": "",
+  "main": "/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server -p 3333"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrumahardif/pwa-app-shell-pattern-andru-mahardi.git"
+  },
+  "keywords": [
+    "App Shell Pattern",
+    "PWA"
+  ],
+  "author": "Andru Mahardi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andrumahardif/pwa-app-shell-pattern-andru-mahardi/issues"
+  },
+  "homepage": "https://github.com/andrumahardif/pwa-app-shell-pattern-andru-mahardi#readme",
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
+}
